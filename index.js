@@ -49,7 +49,7 @@ async function run() {
       const [owner, repo] = full_name.split("/")
       const name = `repo-with-${stargazers_count}-stars`
       const title = `A repository with  ${stargazers_count} stars 🤩`
-      const msg = `[${actor}](https://github.com/${actor}) gave this repository ${toOrd(stargazers_count)} star, thanks a lot for the support!`
+      const msg = `[${actor}](https://github.com/${actor}) gave this repository ${toOrd(stargazers_count)} star, thanks a lot for your support!`
 
       // Break if repo name is not updated
       if (repo == name) { return }
@@ -72,18 +72,18 @@ async function run() {
       )
 
       const readmeContents = [
+        "Note: the idea was adapted from [narze's](https://github.com/narze) repository.",
         `# ${title}`,
         msg,
         "## The star count is wrong?",
         "Then help me fix it, star this repo!",
-        "### The idea was adapted from [narze's](https://github.com/narze) repository.",
       ]
 
       await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
         owner,
         repo,
         path: "README.md",
-        message: `${toOrd(stargazers_count)} star`,
+        message: `${toOrd(stargazers_count)} star 🤩`,
         content: Buffer.from(readmeContents.join("\n\n")).toString("base64"),
         sha: readmeFile.data.sha,
         author: {

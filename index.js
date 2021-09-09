@@ -48,7 +48,7 @@ async function run() {
     filteredRepos.forEach(async ({ full_name, stargazers_count }) => {
       const [owner, repo] = full_name.split("/")
       const name = `repo-with-${stargazers_count}-stars`
-      const title = `A repository with  ${stargazers_count} stars 🤩`
+      const title = `A repository with ${stargazers_count} stars 🤩`
       const msg = `[${actor}](https://github.com/${actor}) gave this repository ${toOrd(stargazers_count)} star, thanks a lot for your support!`
 
       // Break if repo name is not updated

@@ -1,8 +1,8 @@
 Note: the idea was adapted from [narze's](https://github.com/narze) repository.
 
-# A repository with 5 stars 🤩
+# A repository with 6 stars 🤩
 
-[L0SER8228](https://github.com/L0SER8228) gave this repository 5th star, thanks a lot for your support!
+[pritudev](https://github.com/pritudev) gave this repository 6th star, thanks a lot for your support!
 
 ## The star count is wrong?
 
